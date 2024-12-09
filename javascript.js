@@ -37,20 +37,20 @@ function playGame() {
     function playRound(humanChoice, computerChoice) {
         let difference = humanChoice-computerChoice;
         if (difference == -2 || difference == 1) {
-            console.log(`YOU WIN! ${humanAnswer} BEATS ${computerAnswer}!`);
+            alert(`YOU WIN! ${humanAnswer} BEATS ${computerAnswer}!`);
             humanScore = humanScore + 1;
         }
         else if (difference == -1 || difference == 2) {
-            console.log(`YOU LOSE! ${humanAnswer} LOSES TO ${computerAnswer}`);
+            alert(`YOU LOSE! ${humanAnswer} LOSES TO ${computerAnswer}`);
             computerScore = computerScore + 1;
         }
         else {
-            console.log(`YOU TIE! ${humanAnswer} TIES WITH ${computerAnswer}`);
+            alert(`YOU TIE! ${humanAnswer} TIES WITH ${computerAnswer}`);
         }
     }
     for (let i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
-        console.log(`HUMAN: ${humanScore}, COMPUTER: ${computerScore}`);
+        alert(`HUMAN: ${humanScore}, COMPUTER: ${computerScore}`);
     }
 }
 
